@@ -8,11 +8,35 @@
 </head>
 <body>
   input<input type="text">
+  <input type="text" name="" id="">
+<input type="text" name="" id="">
+
+
+
+
   <script>
     const input=document.querySelector('input')
     input.addEventListener('mouseenter',e=>{
       console.log(input.value)
+
     })
+    //写一个快速排序
+    function quickSort(arr) {
+      if (arr.length <= 1) return arr;
+      const pivot = arr[Math.floor(arr.length / 2)];
+      const left = arr.filter(x => x < pivot);
+      const right = arr.filter(x => x > pivot);
+      return [...quickSort(left), pivot, ...quickSort(right)];
+    }
+    // 测试快速排序
+    const arr = [3, 6, 8, 10, 1, 2, 1];
+    const sortedArr = quickSort(arr);
+    console.log(sortedArr); // 输出: [1, 1, 2, 3, 6, 8, 10]
+    // 这是一个测试的文档
+    // 这是一个测试的文档
+
+    
+    document
   </script>
 </body>
 </html>
